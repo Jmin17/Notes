@@ -13,7 +13,7 @@ void Util::initializeRandomIntArray(vector<int>& v, mt19937& generator, uniform_
 
 void Util::testQuickSort()
 {
-	int i = 0, length = 10, minVal = 0, maxVal = 10;
+	int i = 0, length = 15, minVal = 0, maxVal = 100;
 	vector<int> v(length);
 	random_device rd;
 	mt19937 generator(rd());
@@ -21,21 +21,21 @@ void Util::testQuickSort()
 
 	initializeRandomIntArray(v, generator, distribution);
 
-	cout << "Initial array: ";
+	cout << "\n\n\n" << setw(20) << "Initial array: ";
 	for (; i < length; i++) {
 
-		cout << setw(3) << v[i];
+		cout << setw(4) << v[i];
 	}
 	cout << endl;
 
 	Sorter<int>::qSort(v);
 
-	cout << "Sorted array: ";
+	cout << endl << setw(20) << "Sorted array: ";
 	for (i = 0; i < length; i++)
 	{
-		cout << setw(3) << v[i];
+		cout << setw(4) << v[i];
 	}
-	cout << endl << endl;
+	cout << "\n\n\n\n\n\n";
 }
 
 void Util::runRandomDevice()

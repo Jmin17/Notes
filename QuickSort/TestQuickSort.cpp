@@ -9,7 +9,8 @@ int main(char* args)
 {
 	Util u;
 
-	u.threadingAndRng();
+	u.testQuickSort();
+	//u.threadingAndRng();
 }
 
 
